@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nub-RA-7MK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Conversion View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,6 +80,7 @@
                             <outletCollection property="gestureRecognizers" destination="iMJ-VO-tcG" appends="YES" id="Jxa-QE-wEn"/>
                         </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="lWd-cf-UYa"/>
                     <connections>
                         <outlet property="celsiusLabel" destination="hFN-w4-9Jc" id="DNe-oL-iRC"/>
                         <outlet property="textField" destination="YAy-cm-wIb" id="nh9-xI-NSY"/>
@@ -92,7 +93,39 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-63" y="139"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="pbJ-Sl-Yqk">
+            <objects>
+                <viewController id="HY7-nM-rRD" sceneMemberID="viewController">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="wx9-vD-rR2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </mapView>
+                    <tabBarItem key="tabBarItem" title="Item" id="fZ3-Lm-3u2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fFl-14-VrY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542" y="139"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qBO-fx-pxz">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nub-RA-7MK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="CGq-hD-NxA">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HY7-nM-rRD" kind="relationship" relationship="viewControllers" id="6pw-zE-o2e"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="bNu-j2-gFb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9B2-C2-XIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="139"/>
         </scene>
     </scenes>
 </document>
